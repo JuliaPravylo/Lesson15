@@ -1,0 +1,497 @@
+/* Підключення  шрифтів */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Poppins:wght@400;500;700;900&display=swap");
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+img {
+    vertical-align: top;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    line-height: 1;
+    overflow-x: hidden;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    /* для фіксування шапки і підвалу */
+    display: flex;
+    flex-direction: column;
+}
+.header,
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f2726f;
+}
+/* ------------------------------ */
+.header {
+    margin: 0 0 100px 0;
+}
+.main {
+    flex-grow: 1; /* для фіксування шапки і підвалу, дозволяємо збільшуватися */
+}
+body {
+    font-family: "Roboto";
+    font-weight: normal;
+    font-size: 16px;
+    color: #4b4b4b;
+    background-color: #f5f5f5;
+}
+.impact {
+    padding: 20px 0 212px 0;
+    background-color: #29c3be;
+    position: relative;
+    /* background: url("../img/ourimpact/blob.png") 82% 0 no-repeat #29C3BE; */
+}
+.impact::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 50%;
+    transform: translate(88%, 0);
+    width: 695px;
+    height: 308px;
+    background: url("../img/ourimpact/blob.png") 0 0 no-repeat #29c3be;
+}
+.impact__container {
+    position: relative;
+    /* z-index: 2; */
+}
+/* Обмежуючий контейнер за допомогою складного селектору*/
+[class*="__container"] {
+    box-sizing: content-box;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* Блок promise заголовки */
+.titles__label {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 2px 0 0 33px;
+    color: #5d62b5;
+    background: url("../img/ourpromise/overline_mark.svg") 0 0 no-repeat;
+}
+.titles__label_white {
+    color: #ffffff;
+    background: url("../img/ourimpact/overline_mark.svg") 0 0 no-repeat;
+}
+.titles__item {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1, 167;
+    color: #000000;
+}
+.titles__item_white {
+    color: #ffffff;
+}
+.titles *:not(:last-child) {
+    margin: 0px 0px 33px 0px;
+}
+.promise__header {
+    margin: 0 0 68px 0;
+}
+/* Блок promise картки */
+.promise__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+}
+.promise__item {
+    flex: 1 1 33.333%;
+    padding: 0 12px;
+    min-width: 260px;
+}
+.item-promise {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 23px;
+}
+.item-promise__image {
+    font: 0 0 63px;
+}
+/* .item-promise__body{
+    padding: 0 0 0 23px; при видаленні картинки з"являється висячий відступ, прописали в .item-promise - column-gap*/
+.item-title {
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 1.37;
+    color: #f2726f;
+}
+.item-promise__title:not(:last-child) {
+    margin: 0 0 20px 0;
+}
+.item-text {
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+}
+/* Блок services картки */
+.services {
+    padding: 100px 0;
+}
+.services__container {
+    display: flex;
+    flex-direction: column;
+}
+.services__header {
+    margin: 0 0 78px 0;
+}
+.services__items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    margin: 0 -12px;
+}
+.services__item {
+    flex: 1 1 33.333%;
+    padding: 0 12px;
+    min-width: 300px;
+}
+.services__button {
+    align-self: center;
+    /* display: inline-flex; */
+    background: #f2726f;
+    border-radius: 8px;
+    /* min-height: 48px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.15px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 12px 25px;
+    margin: 66px 0 0 0;
+}
+.item-services {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 50px 44px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* При зміні контенту забезпечує однакову висоту карток */
+    height: 100%;
+}
+.item-services__title:not(:last-child) {
+    margin: 0 0 20px 0;
+}
+.item-services__icon:not(:last-child) {
+    margin: 0 0 33px 0;
+}
+/* Якщо картинки різного розміру */
+.item-services__icon {
+    /* height: 63px; висота найбільшої картинки. при "flex-direction:column" висота і ширина помінялися місцями*/
+    flex: 0 0 63px;
+    width: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.item-services__icon img {
+    max-width: 100%;
+    max-height: 63px;
+}
+.impact__body {
+    display: flex;
+    margin: 0 -15px;
+    align-items: flex-end;
+}
+.impact__body:not(:last-child) {
+    margin-bottom: 80px;
+}
+.impact__content {
+    flex: 0 0 50%;
+    padding: 0 15px;
+}
+.impact__header {
+    max-width: 420px;
+}
+.impact__image {
+    flex: 0 0 50%;
+    padding: 0 15px;
+    margin: -100px 0 0 0;
+}
+.impact__image img {
+    max-width: 100%;
+    border-radius: 40px;
+}
+.impact__items {
+    display: flex;
+    row-gap: 24px;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+}
+.impact__item {
+    padding: 0 12px;
+    flex: 0 1 25%;
+}
+.item-impact {
+    display: flex;
+    align-items: center;
+    column-gap: 11px;
+}
+/* .item-impact__image{
+    margin-right: 11px;
+} */
+.item-impact__image {
+    flex: 0 0 76px;
+}
+.item-impact__number {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    color: #ffffff;
+    margin: 0 0 3px 0;
+}
+.item-impact__text {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #5d62b5;
+}
+
+/* --------------------ДЗ---------------------------- */
+/* Блок customers */
+.customers__container {
+    display: flex;
+    margin-bottom: 100px;
+}
+.customers__header {
+    margin: 0 24px 0 0;
+    flex: 0 1 30%;
+}
+.item-customers {
+    background: #ffffff;
+    border-radius: 20px;
+}
+.customers__items {
+    display: flex;
+    text-align: center;
+    gap: 24px;
+    /* justify-content: space-between; */
+    flex: 0 1 70%;
+    flex-wrap: wrap;
+}
+.customers__item {
+    flex: 0 1 50%;
+    max-width: 324px;
+}
+.item-customers {
+    padding: 44px;
+}
+.item-customers__text {
+    margin: 0 0 40px 0;
+    text-align: left;
+}
+.item-customers__title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-content: center;
+    gap: 17px;
+}
+.customers-name {
+    align-self: center;
+}
+/* ------Блок CutSpace---------- */
+[class*="__block"] {
+    box-sizing: content-box;
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.cutspace {
+    font-family: "Poppins", sans-serif;
+    color: #323232;
+    /* для фіксування шапки і підвалу */
+    display: flex;
+    flex-direction: column;
+    background-color:#F5F6FA;
+}
+.header__block{
+    display: flex;
+    align-items: center;
+    margin: 35px auto 44px auto;
+}
+.header__logo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    padding: 0 0 0 34px;
+    margin: 0 348px 0 0;
+    background: url("../img/cutspace/main_icon.svg") 0 2px no-repeat;
+}
+.cutspace__startpage{
+    margin-bottom: 100px;
+}
+.menu__items{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 45px 42px;
+    flex-wrap: wrap;
+}
+.menu__item{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    /* flex: 1 1 20%; */
+    flex-shrink: 1;
+}
+.startpage__block{
+    /* box-sizing:content-box; */
+    padding: 127px 0 134px 0;
+    background: url("../img/cutspace/house.png") 100% 100% no-repeat;
+}
+.startpage__title{
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 1.46;
+    letter-spacing: 0.8px;
+    max-width: 674px;
+    margin: 0 0 25px 0;
+}
+.startpage__text{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.69;
+    letter-spacing: 1.15px;
+    max-width: 467px;
+    margin: 0 0 42px 0;
+}
+.startpage__subscribe-form{
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    justify-content: space-between;
+    max-width: 467px;
+}
+.subscribe-form__input{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #BBBBBB;
+    padding: 0 0 0 72px;
+    /* margin: 0 75px 0 0; */
+    background: url("../img/cutspace/email_icon.png") 28px 2px no-repeat;
+}
+.subscribe-form__button{
+    padding: 18px 37px;
+    background: #F78434;
+    border-radius: 29px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+.serve__titles{
+    margin: 0 auto 45px auto;
+    text-align: center;
+}
+.serve__title{
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 1.48;
+    letter-spacing: 0.8px;
+}
+.serve__subtitle{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.69;
+    letter-spacing: 1.15px;
+}
+.serve__item_orange{
+    background-color: #F78434;
+    color: #FFFFFF;
+    border-radius: 7px;
+}
+.serve__item_white{
+    background-color:#FFFFFF;
+    color: #F78434;
+    border-radius: 7px;
+}
+.item-serve__title{
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+}
+.item-serve__text{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.69;
+    letter-spacing: 1.15px;
+}
+.item-serve__button{
+    background-color: #FFFFFF;
+    border-radius: 29px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 18px 39px;
+    color: #F78434;
+}
+.serve__items{
+    display: flex;
+    align-items:flex-start;
+    column-gap: 30px;
+}
+.serve__item{
+    flex: 1 0 50%;
+    text-align: center;
+}
+.item-serve {
+    padding: 40px 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-serve__text:not(:last-child) {
+    margin: 0 0 25px 0;
+}
+.item-serve__icon:not(:last-child) {
+    margin: 0 0 15px 0;
+}
