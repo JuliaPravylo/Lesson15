@@ -113,7 +113,7 @@ body {
 .titles__item {
     font-weight: 900;
     font-size: 36px;
-    line-height: 1, 167;
+    line-height: 1,67;
     color: #000000;
 }
 .titles__item_white {
@@ -142,7 +142,7 @@ body {
     column-gap: 23px;
 }
 .item-promise__image {
-    font: 0 0 63px;
+    flex: 0 0 63px;
 }
 /* .item-promise__body{
     padding: 0 0 0 23px; при видаленні картинки з"являється висячий відступ, прописали в .item-promise - column-gap*/
